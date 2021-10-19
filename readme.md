@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/eu72airww51vth5g?svg=true)](https://ci.appveyor.com/project/AnastMast/cicustom)
