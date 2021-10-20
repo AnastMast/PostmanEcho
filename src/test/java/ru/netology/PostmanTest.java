@@ -1,6 +1,7 @@
 package ru.netology;
 import static io.restassured.RestAssured.given;
 import org.junit.jupiter.api.Test;
+import static org.hamcrest.Matchers.equalTo;
 
 public class PostmanTest {
     @Test
@@ -10,7 +11,7 @@ public class PostmanTest {
 // Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some data") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("User id") // отправляемые данные (заголовки и query можно выставлять аналогично)
 
 // Выполняемые действия
                 .when()
@@ -19,7 +20,7 @@ public class PostmanTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body(/* --> ваша проверка здесь <-- */)
+                .body("data", equalTo("User id"))
         ;
     }
 }
