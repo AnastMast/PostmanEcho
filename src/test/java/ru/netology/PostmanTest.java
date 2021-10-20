@@ -11,7 +11,7 @@ public class PostmanTest {
 // Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("User id") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("user id") // отправляемые данные (заголовки и query можно выставлять аналогично)
 
 // Выполняемые действия
                 .when()
@@ -20,7 +20,7 @@ public class PostmanTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("User id"))
+                .body("data", equalTo("user"))
         ;
     }
 }
